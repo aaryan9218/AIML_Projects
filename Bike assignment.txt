@@ -1,0 +1,54 @@
+<-->Dataunderstanding
+
+Requirement of the problem statement
+1. problem is less demand of the bikes
+2. need tppredict the bike demand 
+3. need to find relationship between demand and explaratory variables
+4. need to create a linear model that affects the demand
+
+Details.
+1.categorical datatype : column- 
+Season-->change label (1-spring,2-summer,3-fall,4-winter)
+month-->categorical column(need to do barplots, value count) (1-Jan,2-Feb.........)
+WeekDay-->Categorical column (2-wednesday, 1-tuesday)
+Weathersit--> categorical (1-clear, 2-misty, 3-light snow/rain, 4- heavy snow/haeavy rain)
+Year--> Binary column(0-2018, 1-2019)
+Holiday--> Binary(0-no holiday, 1-Holiday)
+Workingday--> Binary(1-workingday, 0 no working day)
+humidity--> numeric column, let it be, keep it as float
+windspeed --> numeric column, let it be, keep it as float
+cnt-->target variable
+casual-->unregistered, drop this
+registered--> from the app, drop this
+date--> drop this
+instant--> drop this as well
+2. tempurature & adjusted temperature are highly corelated, drop one of them, or combine them
+
+
+<-->Data vizualidation,
+1.Perform EDA(univariate, bivariate)
+2.Check corelation between variables)
+
+
+<-->Data preperation
+1. create dummy variables
+2. divide train and test
+3. perform scaling 
+4. divide data into x & y
+
+
+<-->Data Modelling & evaluation:
+1.we will get 50 features(after creating dummy variables)
+2.do RFE and get top 15
+3. then do manual elemination, cehcking one by onr
+4.calculate r2 and adjusted r2 (upto 80~85%)
+5 test set will give 75%
+6. r2 and adjusted r2 diffrence should not be more than 5%
+7. check all the things(no of variables ~= 10, VIF should be kess than 5, pvalue should be less than 5, residual analysis, check adjusted r2 for both test and train set)
+
+<-->Check asumptions for residual analysis
+
+1. calculate error, then plot distribution plot , mean should be 0 and dtandard deviation should be 1
+2. error terma are independent, plot a scatter plot for the error terms
+3. check if the error terms have constant variance(homoscedasticity), we use scatter ploy (y train pred vs error)
+
